@@ -11,7 +11,7 @@ public class ImageWriter {
     private static byte[] ConvertImageByteArray(boolean color){
         int i = 0;
 
-        //Si l'image en niveaux de gris n'existe pas, on la créée.
+        //Si on souhaite écrire l'image en niveau de gris, on fait la transformation
         if(!color) ImageTransform.TramsformToGrayScale(Main.filename);
 
         byte[] data = new byte[Main.width*Main.height*3];

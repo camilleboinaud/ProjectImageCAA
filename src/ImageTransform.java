@@ -12,14 +12,20 @@ import java.io.IOException;
 public class ImageTransform {
 
     public static void TramsformToGrayScale(String name){
+
+        //Variable utilisée pour stocker temporairement la nouvelle image
         byte[][][] data = Main.image;
+        //Pour vérifier si l'image a bien été convertie ou non
         boolean isConverted = true;
+
         if(Main.image !=null){
             try {
+                //Conversion de l'image en niveaux de gris
                 BufferedImage gray = ImageIO.read(new File(name+".bmp"));
                 ColorConvertOp op = new ColorConvertOp(ColorSpace.getInstance(ColorSpace.CS_GRAY), null);
                 op.filter(gray, gray);
 
+                //Ecriture des données pixel par pixel
                 for(int x = 0 ; x < Main.width ; x++){
                     for(int y = 0 ; y < Main.height ; y++){
                         Color color = new Color(gray.getRGB(y,x));
@@ -27,7 +33,7 @@ public class ImageTransform {
                             data[Main.width - 1 - x][y][0] = (byte) color.getRed();
                             data[Main.width - 1 - x][y][1] = (byte) color.getGreen();
                             data[Main.width - 1 - x][y][2] = (byte) color.getBlue();
-                        }else{
+                        }else{ //Si l'image est déjà en niveaux de gris
                             isConverted = false;
                             break;
                         }

@@ -120,15 +120,17 @@ public class ImageReader {
             //Saut de bits inutiles du header de l'image
             reader.skipBytes(headerSize-16);
 
+            //Lecture de l'image pixel par pixel
             try {
+                //Initialisation de la variable contenant les bytes de l'image
                 Main.image = new byte[Main.width][Main.height][3];
                 for(int x = 0 ; x < Main.width ; x++){
                     for(int y = 0 ; y < Main.height ; y++){
-                        if(Main.depth > 8) {
+                        if(Main.depth > 8) {    //Si image en plus de 256 couleurs
                             Main.image[x][y][2] = reader.readByte(); //blue
                             Main.image[x][y][1] = reader.readByte(); //green
                             Main.image[x][y][0] = reader.readByte(); //red
-                        }else{
+                        }else{    //Si l'image possède 256 couleurs ou moins
                             Main.image[x][y][0] = reader.readByte();
                         }
                     }
@@ -156,11 +158,13 @@ public class ImageReader {
         Main.histogram = new int[(int)Math.pow(2.0,(double)Main.depth)];
         for(int i = 0; i < Main.histogram.length ; i++) Main.histogram[i] = 0;
 
+        //Calcul de l'histogramme pour l'ensemble des couleurs de l'image
         for(int x = 0; x < Main.width ; x++){
             for(int y = 0 ; y < Main.height ; y++){
                 Main.histogram[(Main.image[x][y][0]<0)?Main.image[x][y][0]+256:Main.image[x][y][0]]++;
             }
         }
+        System.out.println("[INFO] Histogramme de l'image en niveaux de gris créé");
     }
 
 }
