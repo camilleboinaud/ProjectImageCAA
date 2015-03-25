@@ -1,0 +1,7 @@
+#Itellij
+*.iml
+*idea*
+
+#Sorties java
+/out/
+

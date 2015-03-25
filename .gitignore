@@ -1,0 +1,10 @@
+#Itellij
+*.iml
+*idea*
+
+#Sorties java
+/out/
+
+#Images créées
+*_nb.bmp
+
