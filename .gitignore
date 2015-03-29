@@ -5,9 +5,6 @@
 #Sorties java
 /out/
 
-#Images créées
-*_modified.bmp
-
 #Tmp files
 *~*
 
