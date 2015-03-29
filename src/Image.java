@@ -168,6 +168,11 @@ public abstract class Image {
     abstract void readImage(DataInputStream reader);
 
     /*
+     * Conversion d'une image en nbColors couleurs
+     */
+    abstract void conversion(int nbColors);
+
+    /*
      * Minimum Pair.first
      */
     protected Pair<Integer,Integer> minFirst(Pair<Integer,Integer> a, Pair<Integer,Integer> b){
