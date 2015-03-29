@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -6,17 +7,16 @@ import java.util.HashMap;
  */
 public class Main {
 
-    public static int width;
-    public static int height;
-    public static int depth;
-    public static byte[][][] image;
-    public static byte[] header;
-    public static String filename;
-    public static int[] histogram;
-
     public static void main(String[] args){
-        filename = "horse";
-        ImageReader.ReadBitmap(filename);
-        ImageWriter.WriteBitmap(filename+"_nb",false);
+
+        /*String filename1 = "house";
+        ImageRGB img1 = new ImageRGB(filename1);
+        img1.writeBitmap();*/
+
+
+        String filename2 = "horse_modified";
+        ImageGrayScale img2 = new ImageGrayScale(filename2);
+        img2.conversion(16);
+        img2.writeBitmap();
     }
 }
