@@ -1,12 +1,17 @@
+/**
+ * Image.java
+ * @version 29/03/2015
+ *
+ * @author Sun YE [rollingsunmoon@gmail.com]
+ * @author Camille BOINAUD [boinaud@polytech.unice.fr]
+ */
+
 import utils.Pair;
 
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-/**
- * Created by camille on 28/03/15.
- */
 public abstract class Image {
 
     public int width;

@@ -1,13 +1,17 @@
+/**
+ * ImageGrayScale.java
+ * @version 29/03/2015
+ *
+ * @author Sun YE [rollingsunmoon@gmail.com]
+ * @author Camille BOINAUD [boinaud@polytech.unice.fr]
+ */
+
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import utils.Pair;
 
-
-/**
- * Created by camille on 28/03/15.
- */
 public class ImageGrayScale extends Image {
 
     public int[] histogram;

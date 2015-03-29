@@ -1,10 +1,15 @@
+/**
+ * Main.java
+ * @version 29/03/2015
+ *
+ * @author Sun YE [rollingsunmoon@gmail.com]
+ * @author Camille BOINAUD [boinaud@polytech.unice.fr]
+ */
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Created by camille on 18/03/15.
- */
 public class Main {
 
     public static void main(String[] args){

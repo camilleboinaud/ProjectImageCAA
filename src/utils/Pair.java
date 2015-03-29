@@ -1,8 +1,13 @@
+/**
+ * Pair.java
+ * @version 29/03/2015
+ *
+ * @author Sun YE [rollingsunmoon@gmail.com]
+ * @author Camille BOINAUD [boinaud@polytech.unice.fr]
+ */
+
 package utils;
 
-/**
- * Created by camille on 29/03/15.
- */
 public class Pair<A,B> {
     private A first;
     private B second;
